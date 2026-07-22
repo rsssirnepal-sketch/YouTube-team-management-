@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StudioOS — YouTube team management dashboard" />
+  <title>StudioOS | CreatorLab Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-icon">▶</span><span>Studio<span class="violet">OS</span></span></div>
+      <button class="workspace-switcher">CreatorLab <span>⌄</span></button>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="#overview" class="nav-link active"><span>▦</span> Overview</a>
+        <a href="#content" class="nav-link"><span>▻</span> Content</a>
+        <a href="#projects" class="nav-link"><span>▣</span> Projects</a>
+        <a href="#calendar" class="nav-link"><span>□</span> Calendar</a>
+        <a href="#team" class="nav-link"><span>♧</span> Team</a>
+        <a href="#analytics" class="nav-link"><span>◫</span> Analytics</a>
+      </nav>
+      <p class="navigation-title">WORKSPACE</p>
+      <nav class="navigation" aria-label="Workspace navigation">
+        <a href="#tasks" class="nav-link"><span>✓</span> My tasks <b>6</b></a>
+        <a href="#inbox" class="nav-link"><span>♢</span> Inbox <b class="notice">3</b></a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#settings" class="nav-link"><span>⚙</span> Settings</a>
+        <a href="#help" class="nav-link"><span>?</span> Help center</a>
+        <section class="pro-card"><span>✦</span><strong>Unlock your potential</strong><p>Get AI insights for your channel.</p><button>Explore Pro</button></section>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+        <label class="search"><span>⌕</span><input id="globalSearch" placeholder="Search anything..." /><kbd>⌘ K</kbd></label>
+        <div class="profile-area"><button class="notification" id="notifyButton" aria-label="Notifications">♢<i></i></button><span class="profile-avatar">AM</span><span class="profile-copy"><strong>Alex Morgan</strong><small>Channel owner</small></span><span>⌄</span></div>
+      </header>
+
+      <section class="page-heading" id="overview"><div><p class="eyebrow">TUESDAY, JULY 22</p><h1>Good morning, Alex <span>✦</span></h1><p>Here’s what’s happening with CreatorLab today.</p></div><button class="primary" id="createButton">＋ <span>Create new</span>⌄</button></section>
+      <section class="metric-grid" id="metrics"></section>
+      <section class="dashboard-grid">
+        <article class="card performance-card"><div class="card-heading"><div><h2>Channel performance</h2><p>Last 30 days</p></div><button class="select-button">Views ⌄</button></div><div class="chart-legend"><span><i></i> Views</span><b>1,280,492</b><em>+18.2%</em></div><div class="chart" id="chart" aria-label="Views chart"></div><div class="x-axis"><span>Jul 1</span><span>Jul 5</span><span>Jul 10</span><span>Jul 15</span><span>Jul 20</span><span>Today</span></div></article>
+        <article class="card focus-card" id="tasks"><div class="card-heading"><div><h2>Today’s focus</h2><p>3 tasks due today</p></div><button class="plain-button">•••</button></div><div id="taskList"></div><button class="link-button">View all tasks →</button></article>
+        <article class="card pipeline-card"><div class="card-heading"><div><h2>Content pipeline</h2><p>12 videos in production</p></div><button class="plain-button">•••</button></div><div id="pipeline"></div></article>
+        <article class="card activity-card"><div class="card-heading"><div><h2>Recent activity</h2><p>Latest from your team</p></div><button class="plain-button">•••</button></div><div id="activity"></div></article>
+      </section>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal"><button class="close" id="closeModal">×</button><h2>Create a new item</h2><p>Choose what you’d like to add to your workspace.</p><div class="modal-options"><button data-create="Video">▻ New video</button><button data-create="Project">▣ New project</button><button data-create="Task">✓ New task</button></div></section></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
